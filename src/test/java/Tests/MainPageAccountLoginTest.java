@@ -47,10 +47,8 @@ public class MainPageAccountLoginTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         //Sign up
         this.driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[1]/form/div[2]/div[1]/a")).click();
-
         //REGISTER USER
         this.driver.findElement(By.name("firstname")).sendKeys("Gerwazy3455");
         this.driver.findElement(By.name("lastname")).sendKeys("Moczymorda");

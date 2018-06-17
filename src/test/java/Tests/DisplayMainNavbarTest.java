@@ -44,7 +44,6 @@ public class DisplayMainNavbarTest {
     this.driver.findElement(By.xpath("/html/body/nav/div/div[2]/ul[1]/li[1]/a")).click();
     this.driver.get("https://www.phptravels.net/");
 
-
 //Assert HOTELS link on navbar exist. This assertion checks test, and tries to click object if working, it continues
     String resultHotels = this.driver.findElement(By.xpath("/html/body/nav/div/div[2]/ul[1]/li[2]/a")).getText();
     Assert.assertEquals(resultHotels,"HOTELS");
