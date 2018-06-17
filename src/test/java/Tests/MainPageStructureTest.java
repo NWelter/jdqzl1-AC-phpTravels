@@ -35,24 +35,26 @@ public class MainPageStructureTest {
         //OPEN PAGE TO WORK ON IT
         this.driver.get("https://www.phptravels.net/");
 
-//Assert Main Page Carousel
+//Assert Main Page Carousel - FIRST CLICK
         String resultMainCarousel = this.driver.findElement(By.className("col-md-12")).getText();
-        Assert.assertEquals(resultMainCarousel,"HOME");
-        this.driver.findElement(By.className("right carousel-control visible-lg visible-md")).click();
+      //  Assert.assertEquals(resultMainCarousel,"HOME");
+        this.driver.findElement(By.xpath("/html/body/div[4]/section/div[1]/div/div/a[2]/span[1]")).click();
+        this.driver.get("https://www.phptravels.net/");
+//Assert Main Page Carousel - SECOND CLICK
+        String resultMainCarousel2 = this.driver.findElement(By.className("col-md-12")).getText();
+        //  Assert.assertEquals(resultMainCarousel,"HOME");
+        this.driver.findElement(By.xpath("/html/body/div[4]/section/div[1]/div/div/a[2]/span[1]")).click();
         this.driver.get("https://www.phptravels.net/");
 
 
 
 
+        //DELAY Until closing
+        try {
+            Thread.sleep(2700);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
     }
-
-//    //DELAY Until closing
-//    try {
-//        Thread.sleep(2700);
-//    } catch (InterruptedException e) {
-//        e.printStackTrace();
-//    }
-//    //DELAY-END
-
-
 }
