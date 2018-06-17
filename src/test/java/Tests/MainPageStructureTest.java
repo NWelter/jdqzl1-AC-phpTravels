@@ -40,12 +40,37 @@ public class MainPageStructureTest {
       //  Assert.assertEquals(resultMainCarousel,"HOME");
         this.driver.findElement(By.xpath("/html/body/div[4]/section/div[1]/div/div/a[2]/span[1]")).click();
         this.driver.get("https://www.phptravels.net/");
+//WAIT 1.3 sec
+        try {
+            Thread.sleep(1300);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+//--------------------------------------------------------------------------------------------------------------
 //Assert Main Page Carousel - SECOND CLICK
         String resultMainCarousel2 = this.driver.findElement(By.className("col-md-12")).getText();
         //  Assert.assertEquals(resultMainCarousel,"HOME");
         this.driver.findElement(By.xpath("/html/body/div[4]/section/div[1]/div/div/a[2]/span[1]")).click();
         this.driver.get("https://www.phptravels.net/");
+//WAIT 1.3 sec
+        try {
+            Thread.sleep(1300);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+//------------------------------------------------------------------------------------------------------------
 
+//Assert Main Page Carousel - THIRD CLICK
+        String resultMainCarousel3 = this.driver.findElement(By.className("col-md-12")).getText();
+        //  Assert.assertEquals(resultMainCarousel,"HOME");
+        this.driver.findElement(By.xpath("/html/body/div[4]/section/div[1]/div/div/a[2]/span[1]")).click();
+        this.driver.get("https://www.phptravels.net/");
+//WAIT 1.3 sec.
+        try {
+            Thread.sleep(1300);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
 
 
