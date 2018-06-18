@@ -37,8 +37,8 @@ public class MainPageStructureTest {
 
 //Assert Main Page Carousel - FIRST CLICK
         String resultMainCarousel = this.driver.findElement(By.className("col-md-12")).getText();
-      //  Assert.assertEquals(resultMainCarousel,"HOME");
         this.driver.findElement(By.xpath("/html/body/div[4]/section/div[1]/div/div/a[2]/span[1]")).click();
+        Assert.assertEquals(resultMainCarousel, "YOUR JOURNEY BEGINS HERE", "YOUR JOURNEY BEGINS HERE");
         this.driver.get("https://www.phptravels.net/");
 //WAIT 1.3 sec
         try {
