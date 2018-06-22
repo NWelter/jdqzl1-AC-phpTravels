@@ -33,8 +33,17 @@ public void GivenThatHotOfferIs() {
         this.driver.get("http://phptravels.net/");
         //Testing logging in
 
+    //Assert existence of HotOffers 1
 
-    
+        String virginGorda = this.driver.findElement(By.xpath("/html/body/div[4]/div[1]/a[1]/div/div/div")).getText();
+        Assert.assertEquals( virginGorda, "Virgin Gorda beaches");
+
+    //Assert existance of Offer 2
+
+        
+
+
+
 
         //DELAY Until closing
         try {
