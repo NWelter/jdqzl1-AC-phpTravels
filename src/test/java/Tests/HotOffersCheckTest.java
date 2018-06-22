@@ -39,9 +39,11 @@ public void GivenThatHotOfferIs() {
         String virginGorda = this.driver.findElement(By.cssSelector("div.container:nth-child(2) > a:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h4:nth-child(1) > strong:nth-child(1)")).getText();
     //Assertions: This assertions check if "string pattern" exist in string - virginGorda variable holds this string!
         Assert.assertThat(virginGorda, new StringContains("Virgin Gorda beaches and"));
+    //Assert existence of HotOffers - Air Seychelles
+        String airLiner = this.driver.findElement(By.cssSelector("div.container:nth-child(2) > a:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)")).getText();
+    //Assertions: This assertion check if string pattern exist in string - airLiner:
+        Assert.assertThat(airLiner, new StringContains("Fiercely Independent") );
 
-
-    //Assert existance of Offer 2
 
 
 
