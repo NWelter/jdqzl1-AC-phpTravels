@@ -86,7 +86,7 @@ public class DisplayMainNavbarTest {
     this.driver.findElement(By.xpath("/html/body/nav/div/div[2]/ul[1]/li[8]/a")).click();
     this.driver.get("https://www.phptravels.net/");
 
-    //DELAY Until closing
+ //DELAY Until closing
     try {
         Thread.sleep(2700);
     } catch (InterruptedException e) {
