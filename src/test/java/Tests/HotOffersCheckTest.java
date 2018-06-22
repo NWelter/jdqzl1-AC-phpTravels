@@ -1,5 +1,7 @@
 package Tests;
 
+import jdk.nashorn.internal.runtime.arrays.ArrayLikeIterator;
+import org.hamcrest.core.StringContains;
 import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -33,14 +35,15 @@ public void GivenThatHotOfferIs() {
         this.driver.get("http://phptravels.net/");
         //Testing logging in
 
-    //Assert existence of HotOffers 1
+    //Assert existence of HotOffers - Virgin Georgia - 1
+        String virginGorda = this.driver.findElement(By.cssSelector("div.container:nth-child(2) > a:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h4:nth-child(1) > strong:nth-child(1)")).getText();
+    //Assertions: This assertions check if "string pattern" exist in string - virginGorda variable holds this string!
+        Assert.assertThat(virginGorda, new StringContains("Virgin Gorda beaches and"));
 
-        String virginGorda = this.driver.findElement(By.xpath("/html/body/div[4]/div[1]/a[1]/div/div/div")).getText();
-        Assert.assertEquals( virginGorda, "Virgin Gorda beaches");
 
     //Assert existance of Offer 2
 
-        
+
 
 
 
