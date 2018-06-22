@@ -26,7 +26,6 @@ public class HotOffersCheckTest {
     public void setup() {
         this.driver = new ChromeDriver();
         }
-
 @After
 
 
@@ -43,9 +42,12 @@ public void GivenThatHotOfferIs() {
         String airLiner = this.driver.findElement(By.cssSelector("div.container:nth-child(2) > a:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)")).getText();
     //Assertions: This assertion check if string pattern exist in string - airLiner:
         Assert.assertThat(airLiner, new StringContains("Fiercely Independent") );
+    //Assert existence of HotOffers - Russia Futbol
+        String footBall = this.driver.findElement(By.cssSelector("div.container:nth-child(2) > a:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)")).getText();
+    //Assertions: This assertion check if string pattern exist in string footBall:
+        Assert.assertThat(footBall, new StringContains("Peace Train"));
 
-
-
+    //div.container:nth-child(2) > a:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)
 
 
 
