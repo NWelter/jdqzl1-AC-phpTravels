@@ -19,7 +19,7 @@ public class HotOffersCheckTest {
 @BeforeClass
     public static void usawSciezke() {
         //CHANGE PATH TO THE CHROMEDRIVER AS NEEDED - AND RE-RUN TESTS
-        System.setProperty("webdriver.chrome.driver", "C:\\Github\\jdqzl1-materialy\\jdqzl1-selenium\\src\\test\\java\\resources\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src\\test\\java\\resources\\chromedriver.exe");
         }
 
 @Before
@@ -48,9 +48,6 @@ public void GivenThatHotOfferIs() {
         Assert.assertThat(footBall, new StringContains("Peace Train"));
 
     //div.container:nth-child(2) > a:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)
-
-
-
 
         //DELAY Until closing
         try {
